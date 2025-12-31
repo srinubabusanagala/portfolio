@@ -1,6 +1,6 @@
 /* --- Variables & Reset --- */
 :root {
-    --primary-color: #0056b3; /* Professional Blue */
+    --primary-color: #0056b3; 
     --accent-color: #007bff; /* Electric Blue */
     --text-dark: #1a1a1a;
     --text-body: #444444;
@@ -124,10 +124,32 @@ ul {
     width: 100%;
 }
 
+/* --- Custom Logo Styles (Single Line, No Bold) --- */
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02); 
+}
+
+.logo-icon svg {
+    display: block; 
+    filter: drop-shadow(0 4px 6px rgba(0, 123, 255, 0.3)); 
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    font-weight: 500; /* Regular Medium Weight */
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Forces single line always */
 }
 
 .nav-links {
@@ -169,13 +191,26 @@ ul {
 
 /* --- Hero Section --- */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     padding-top: 70px;
+    padding-bottom: 50px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow-x: hidden; 
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+}
+
+.hero-text {
+    text-align: left;
+    min-width: 0; 
 }
 
 .hero-subtitle {
@@ -186,22 +221,70 @@ ul {
     margin-bottom: 10px;
 }
 
+/* --- TYPING NAME STYLES (Single Line + Blue) --- */
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3rem; 
     color: var(--text-dark);
     margin-bottom: 20px;
+    line-height: 1.2;
+    white-space: nowrap; /* Forces single line */
+}
+
+#typing-text {
+    color: var(--accent-color); /* This is the BLUE color */
+    font-weight: 700;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: var(--accent-color); /* Blue Cursor */
+    width: 3px;             
+    height: 1em;            
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .hero-summary {
     font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
+    margin-bottom: 30px;
+    max-width: 500px;
 }
 
 .cta-group {
     display: flex;
-    justify-content: center;
     gap: 15px;
+    justify-content: flex-start;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Morphing Blob Image Style --- */
+.hero-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border: 3px solid var(--accent-color); 
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 }
 
 /* --- About Section --- */
@@ -260,7 +343,7 @@ ul {
     background-color: #ddd;
     top: 0;
     bottom: 0;
-    left: 20px; /* Adjust for mobile/desktop */
+    left: 20px;
 }
 
 .timeline-item {
@@ -413,7 +496,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- Responsive Design --- */
+/* --- Responsive Design (Mobile) --- */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -428,7 +511,7 @@ footer {
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
-        transform: translateY(-150%); /* Hidden by default */
+        transform: translateY(-150%);
         transition: transform 0.3s ease-in-out;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
@@ -437,8 +520,51 @@ footer {
         transform: translateY(0);
     }
 
+    /* Mobile Logo Adjustment (Keep on one line) */
+    .logo-text {
+        font-size: 1.2rem;
+        white-space: nowrap; 
+    }
+
+    /* Hero Section Mobile adjustments */
+    .hero {
+        height: auto;
+        padding-top: 100px;
+    }
+    
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* CRITICAL FIX FOR MOBILE SINGLE LINE */
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        white-space: nowrap;
+    }
+
+    .hero-text {
+        text-align: center;
+        order: 2;
+    }
+
+    .hero-image-container {
+        order: 1;
+    }
+    
+    .hero-img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-summary {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-group {
+        justify-content: center;
     }
 
     .edu-grid {
