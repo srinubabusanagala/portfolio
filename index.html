@@ -43,7 +43,7 @@
     <header class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
-                <p class="hero-subtitle">Cyber Security Analyst / SOC Analyst / Security Engineer</p>
+                <p class="hero-subtitle">Cyber Security Analyst / SOC Analyst / Developer</p>
                 <h1>I'm <span id="typing-text"></span><span class="cursor"></span></h1>
                 <p class="hero-summary">Building secure systems through penetration testing, Python automation, and active network defense.</p>
                 <div class="cta-group">
@@ -71,6 +71,17 @@
                     My core focus areas include vulnerability management, automating security tools with Python, and analyzing logs to neutralize threats in real-time.
                 </p>
             </div>
+            <!-- NEW: Special Interest Callout Box -->
+            <div class="special-interest-card">
+                <div class="interest-icon">👨‍🏫</div>
+                <div class="interest-content">
+                    <h3>Special Interest: Teaching & Mentoring</h3>
+                    <p>
+                        Beyond hands-on technical work, I have a strong passion for cybersecurity education. I enjoy breaking down complex security and programming concepts for peers, fostering collaborative learning environments, and helping others build structured, practical skills in technology.
+                    </p>
+                </div>
+            </div>
+            <!-- END NEW -->
         </div>
     </section>
 
@@ -154,73 +165,109 @@
         </div>
     </section>
 
+    <!-- =========================================
+         PROJECTS SECTION
+    ========================================= -->
     <section id="projects" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Key Projects</h2>
             <div class="projects-grid">
 
+                <!-- 1. Autonomous Firewall (NEW - Recent) -->
+                <article class="project-card">
+                    <h3>Autonomous Firewall Rule Intelligence System</h3>
+                    <div class="project-content">
+                        <p><strong>Problem:</strong> Static firewall rules struggle to adapt to rapidly evolving network threats and zero-day attacks.</p>
+                        <p><strong>Tools:</strong> Python, Machine Learning.</p>
+                        <p><strong>Workflow:</strong> Engineered an ML-driven engine to analyze network traffic patterns and autonomously generate or update firewall rules.</p>
+                        <p><strong>Outcome:</strong> Significantly reduced response times to novel threats by enabling dynamic, proactive network defense mechanisms.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/srinubabusanagala/Autonomous-firewall-rule-intelligence-system-using-machine-learning" target="_blank" rel="noopener noreferrer">View Code</a>
+                    </div>
+                </article>
+
+                <!-- 2. Dynamic App Generator (NEW - Recent) -->
+                <article class="project-card">
+                    <h3>Dynamic App Generator</h3>
+                    <div class="project-content">
+                        <p><strong>Problem:</strong> Manual application scaffolding is time-consuming and prone to configuration errors.</p>
+                        <p><strong>Tools:</strong> Python, Automation Scripting, Templating.</p>
+                        <p><strong>Workflow:</strong> Developed an automated generation tool that dynamically constructs application structures based on user-defined parameters.</p>
+                        <p><strong>Outcome:</strong> Accelerated development cycles and ensured standardized, secure-by-default application configurations.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/srinubabusanagala/dynamic-app-generator" target="_blank" rel="noopener noreferrer">View Code</a>
+                    </div>
+                </article>
+
+                <!-- 3. Keylogger (NEW - Recent) -->
+                <article class="project-card">
+                    <h3>Stealth Keylogger & Endpoint Audit Tool</h3>
+                    <div class="project-content">
+                        <p><strong>Problem:</strong> Organizations need to understand how credential-harvesting malware operates to configure strong endpoint detection system rules.</p>
+                        <p><strong>Tools:</strong> Python, Pynput Library, Logging.</p>
+                        <p><strong>Workflow:</strong> Developed a local keystroke logging tool running silently in the background to record user inputs securely for security auditing.</p>
+                        <p><strong>Outcome:</strong> Successfully demonstrated how input-interception tools bypass standard defenses, providing data to optimize local EDR policies.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/srinubabusanagala/keylogger" target="_blank" rel="noopener noreferrer">View Code</a>
+                    </div>
+                </article>
+
+                <!-- 4. SIEM Threat Hunting -->
                 <article class="project-card">
                     <h3>SIEM Threat Hunting & Incident Response</h3>
                     <div class="project-content">
-                        <p><strong>Problem:</strong> Need to detect and investigate simulated brute-force attacks.</p>
-                        <p><strong>Tools:</strong> Splunk SIEM, Log Analysis.</p>
-                        <p><strong>Workflow:</strong> Analyzed authentication logs to detect patterns of unauthorized access.</p>
-                        <p><strong>Outcome:</strong> Confirmed system compromise and generated a full incident response report.</p>
+                        <p><strong>Problem:</strong> Security teams need efficient ways to detect, track, and mitigate advanced persistent threats in massive log datasets.</p>
+                        <p><strong>Tools:</strong> Splunk SIEM, Log Analysis, Incident Response.</p>
+                        <p><strong>Workflow:</strong> Ingested and analyzed authentication logs to hunt for anomalies and uncover simulated brute-force attack vectors.</p>
+                        <p><strong>Outcome:</strong> Created a comprehensive incident response report with actionable remediation steps, proving system compromise.</p>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/srinubabusanagala" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://github.com/srinubabusanagala/SIEM-Threat-Hunting-and-Incident-Response" target="_blank" rel="noopener noreferrer">View Code</a>
                     </div>
                 </article>
 
+                <!-- 5. AI-Powered Phishing Detection -->
                 <article class="project-card">
                     <h3>AI-Powered Phishing Detection System</h3>
                     <div class="project-content">
-                        <p><strong>Problem:</strong> Identifying fraudulent websites to prevent user compromise.</p>
-                        <p><strong>Tools:</strong> Python, Machine Learning.</p>
-                        <p><strong>Workflow:</strong> Developed a system to classify malicious URLs by analyzing lexical and domain-based features.</p>
-                        <p><strong>Outcome:</strong> Achieved high accuracy in identifying phishing sites.</p>
+                        <p><strong>Problem:</strong> Traditional signature-based anti-phishing tools fail against newly registered, disguised malicious domains.</p>
+                        <p><strong>Tools:</strong> Python, Machine Learning, Flask, Scikit-learn.</p>
+                        <p><strong>Workflow:</strong> Built and trained a classification model to evaluate lexical and domain-based features of URLs in real-time.</p>
+                        <p><strong>Outcome:</strong> Delivered a high-accuracy detection API that proactively flags and blocks users from interacting with fraudulent websites.</p>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/srinubabusanagala" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://github.com/srinubabusanagala/Phishing-Detection-Website" target="_blank" rel="noopener noreferrer">View Code</a>
                     </div>
                 </article>
 
+                <!-- 6. OWASP Web App Penetration Test -->
                 <article class="project-card">
                     <h3>Web App Penetration Test (OWASP Juice Shop)</h3>
                     <div class="project-content">
-                        <p><strong>Problem:</strong> Identifying critical vulnerabilities in a web application.</p>
-                        <p><strong>Tools:</strong> Burp Suite, Manual Testing.</p>
-                        <p><strong>Workflow:</strong> Conducted manual testing for SQL Injection, XSS, and broken authentication.</p>
-                        <p><strong>Outcome:</strong> Documented vulnerabilities and provided remediation guidance.</p>
+                        <p><strong>Problem:</strong> E-commerce platforms frequently suffer from critical vulnerabilities like SQLi and broken authentication.</p>
+                        <p><strong>Tools:</strong> Burp Suite, OWASP Top 10 Methodology, Manual Testing.</p>
+                        <p><strong>Workflow:</strong> Performed a comprehensive vulnerability assessment simulating real-world attacker techniques.</p>
+                        <p><strong>Outcome:</strong> Identified high-risk flaws and authored a professional penetration testing report with strict remediation guidance.</p>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/srinubabusanagala" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://github.com/srinubabusanagala/Web-Application-Penetration-Test-of-OWASP-Juice-Shop-" target="_blank" rel="noopener noreferrer">View Code</a>
                     </div>
                 </article>
 
+                <!-- 7. Secure File Sharing -->
                 <article class="project-card">
                     <h3>Secure File Sharing with AES Encryption</h3>
                     <div class="project-content">
-                        <p><strong>Problem:</strong> Securing data-at-rest and preventing IDOR vulnerabilities.</p>
-                        <p><strong>Tools:</strong> Python, Flask, AES-256.</p>
-                        <p><strong>Workflow:</strong> Implemented AES-256 encryption and secure, single-use download links.</p>
-                        <p><strong>Outcome:</strong> Mitigated IDOR risks and ensured data confidentiality.</p>
+                        <p><strong>Problem:</strong> Unencrypted file transfers over networks are highly susceptible to interception and IDOR attacks.</p>
+                        <p><strong>Tools:</strong> Python, Flask, AES-256 Cryptography.</p>
+                        <p><strong>Workflow:</strong> Implemented robust AES-256 encryption for data-at-rest and generated secure, single-use access links.</p>
+                        <p><strong>Outcome:</strong> Ensured end-to-end data confidentiality and successfully mitigated unauthorized access risks.</p>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/srinubabusanagala" target="_blank" rel="noopener noreferrer">View Code</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3>DoS & DDoS Attack Prevention Tool</h3>
-                    <div class="project-content">
-                        <p><strong>Problem:</strong> Detecting real-time SYN flood attacks.</p>
-                        <p><strong>Tools:</strong> Python, Multi-threading, Packet Inspection.</p>
-                        <p><strong>Workflow:</strong> Engineered a tool to inspect packets and validate effectiveness against Metasploit attacks.</p>
-                        <p><strong>Outcome:</strong> Successful real-time detection of Denial of Service attempts.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/srinubabusanagala" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://github.com/srinubabusanagala/Secure-File-Sharing-System-with-AES-Encryption" target="_blank" rel="noopener noreferrer">View Code</a>
                     </div>
                 </article>
 
@@ -259,7 +306,7 @@
 
     <section id="certifications" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Certifications & Achievements</h2>
+            <h2 class="section-title">Certifications, Badges & Achievements</h2>
             <div class="cert-grid">
 
                 <div class="cert-card">
@@ -276,7 +323,7 @@
                         <span>Ops Management</span>
                         <span>Leadership</span>
                     </div>
-                    <a href="#" class="cert-link">View Certificate ↗</a>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_certificate-certified-red-team-operations-activity-7415731673671172096-XQiI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
                 </div>
 
                 <div class="cert-card">
@@ -293,7 +340,7 @@
                         <span>Firewalls</span>
                         <span>Vulnerability Mgmt</span>
                     </div>
-                    <a href="#" class="cert-link">View Certificate ↗</a>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_cnsp-certification-activity-7398340799265984513-Xnrm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
                 </div>
 
                 <div class="cert-card">
@@ -310,7 +357,7 @@
                         <span>Email Security</span>
                         <span>Phishing Analysis</span>
                     </div>
-                    <a href="#" class="cert-link">View Certificate ↗</a>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_certified-phishing-prevention-specialist-activity-7411417557695590400--GFU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
                 </div>
 
                 <div class="cert-card">
@@ -327,12 +374,45 @@
                         <span>Education</span>
                         <span>Awareness</span>
                     </div>
-                    <a href="#" class="cert-link">View Certificate ↗</a>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_cybersecurity-certification-ccep-activity-7397269220985622528-ji2_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
                 </div>
 
                 <div class="cert-card">
                     <div class="cert-header">
-                        <h3>Python Essentials & Intro to Cybersecurity</h3>
+                        <h3>Introduction to Cybercrime and Security</h3>
+                        <span class="issuer">Simplilearn</span>
+                    </div>
+                    <div class="cert-details">
+                        <p><strong>Issue Date:</strong> May 2024</p>
+                        <p><strong>Status:</strong> Completed</p>
+                    </div>
+                    <div class="cert-tags">
+                        <span>Cybercrime</span>
+                        <span>Security Fundamentals</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_srinubabu-sanagala-has-successfully-completed-activity-7200841560895168513-KCw4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <h3>Tata Group's Cybersecurity Analyst</h3>
+                        <span class="issuer">Forage</span>
+                    </div>
+                    <div class="cert-details">
+                        <p><strong>Issue Date:</strong> June 2024</p>
+                        <p><strong>Status:</strong> Job Simulation Completed</p>
+                    </div>
+                    <div class="cert-tags">
+                        <span>IAM</span>
+                        <span>Platform Integration</span>
+                        <span>Assessment</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_forage-certificate-activity-7212394281133584385-88PL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <h3>Python Essentials 1</h3>
                         <span class="issuer">CISCO Networking Academy</span>
                     </div>
                     <div class="cert-details">
@@ -340,10 +420,55 @@
                     </div>
                     <div class="cert-tags">
                         <span>Python</span>
-                        <span>Network Basics</span>
-                        <span>Security Fundamentals</span>
+                        <span>Programming</span>
                     </div>
-                    <a href="#" class="cert-link">View Certificate ↗</a>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_python-essentials-1-was-issued-by-cisco-to-activity-7282712575224545280-47in?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Badge ↗</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <h3>Introduction to Cybersecurity</h3>
+                        <span class="issuer">CISCO Networking Academy</span>
+                    </div>
+                    <div class="cert-details">
+                        <p><strong>Status:</strong> Completed</p>
+                    </div>
+                    <div class="cert-tags">
+                        <span>Network Basics</span>
+                        <span>Security Foundations</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_introduction-to-cybersecurity-was-issued-activity-7250881395563069441-z1Z3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Badge ↗</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <h3>Mitigate incidents using Microsoft Defender</h3>
+                        <span class="issuer">Microsoft</span>
+                    </div>
+                    <div class="cert-details">
+                        <p><strong>Status:</strong> Module Completed</p>
+                    </div>
+                    <div class="cert-tags">
+                        <span>Microsoft Defender XDR</span>
+                        <span>Security Operations</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_mitigate-incidents-using-microsoft-365-defender-activity-7292916691523563520-fCvs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Badge ↗</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <h3>Artificial Intelligence Fundamentals</h3>
+                        <span class="issuer">IBM SkillsBuild</span>
+                    </div>
+                    <div class="cert-details">
+                        <p><strong>Issue Date:</strong> Oct 2024</p>
+                        <p><strong>Status:</strong> Completed</p>
+                    </div>
+                    <div class="cert-tags">
+                        <span>AI</span>
+                        <span>Machine Learning</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/srinubabu-sanagala-782a3a305_artificial-intelligence-activity-7255221492441845760-5bmH?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3uAtIBvp7-OagW784EKtofhWTkcrmoCwM" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate ↗</a>
                 </div>
 
                 <div class="cert-card achievement-card">
@@ -368,7 +493,7 @@
     <section id="contact" class="section bg-dark">
         <div class="container contact-content">
             <h2 class="text-white">Let's Secure the Future</h2>
-            <p class="text-white">I am currently open to opportunities as a SOC Analyst or Security Engineer.</p>
+            <p class="text-white">I am currently open to opportunities as a Cyber Security Engineer or SOC Analyst or Developer Roles.</p>
             <div class="contact-actions">
                 <a href="mailto:sanagalasrinubabu@gmail.com" class="btn-primary">Email Me: sanagalasrinubabu@gmail.com</a>
             </div>
