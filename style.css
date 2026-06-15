@@ -629,12 +629,16 @@ ul {
 
 .social-links {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Ensures perfectly even spacing between items */
 }
 
 .social-links a {
     color: #aaa;
     font-weight: 600;
-    margin: 0 10px;
+    transition: var(--transition); /* Adds a smooth hover effect */
 }
 
 .social-links a:hover {
@@ -643,6 +647,7 @@ ul {
 
 .separator {
     color: #555;
+    user-select: none; /* Prevents users from accidentally highlighting the pipe */
 }
 
 footer {
